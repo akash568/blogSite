@@ -1,0 +1,34 @@
+let darkMode=false;
+jquery(".dark-mode").click(function () {
+  if(darkMode==false){
+    jquery(".navbar-default").css("background-color","rgb(1, 1, 26)");
+    jquery(".navbar-default").hover(function(){
+      jquery(".navbar-default").css("color","#1abc9c");
+  });
+  jquery(".navbar-default .navbar-brand").css("color","white").hover(function(){
+    jquery(this).css("color","#1abc9c");
+  });
+  jquery(".navbar-default .navbar-nav>li>a").css("color","white").hover(function(){
+    jquery(this).css("color","#1abc9c");
+  });
+  jquery(body).css({"background-color":"black","color":"white"});
+  jquery(".footer").css("background-color","black");
+  jquery("dark-mode").removeClass("fas").addClass("far");
+  darkMode=true;
+  }else{
+    jquery(".navbar-default").css("background-color","#f8f8f8");
+    jquery(".navbar-default").hover(function(){
+      jquery(this).css("color","#1abc9c");
+      });
+      jquery(".navbar-default .navbar-brand").css("color","#777").hover(function(){
+        jquery(this).css("color","#1abc9c");
+      });
+      jquery(".navbar-default .navbar-nav>li>a").css("color","#777").hover(function(){
+        jquery(this).css("color","#1abc9c");
+      });
+      jquery(body).css({"background-color":"white","color":"rgb(1, 1, 26)"});
+      jquery(".footer").css("background-color","#1abc9c");
+      jquery("dark-mode").removeClass("far").addClass("fas");
+      darkMode=false;
+  }
+});
